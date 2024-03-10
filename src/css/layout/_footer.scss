@@ -1,0 +1,30 @@
+
+.footer {
+  a {
+    @media (min-width: 768px){
+      color: $brand-link;
+      &:hover {
+        @apply text-blue;
+        @apply underline;
+      }
+    }
+  }
+  
+}
+
+/* shame - parent footer overrides */
+.text-white {
+  color: #fff !important;
+}
+
+.footer-menu {
+  @media (max-width: 768px){
+    p, a {
+      color: #fff;
+    }
+
+    i {
+      @apply text-green;
+    }
+  }
+}

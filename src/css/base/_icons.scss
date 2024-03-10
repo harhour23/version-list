@@ -1,0 +1,13 @@
+// .icon-search {
+//   font-size: 18px;
+//   /* vertical-align: middle; */
+//   line-height: 26px;
+// }
+
+.icon-chevron-down {
+  transform: rotate(90deg);
+}
+
+.icon-chevron-down:before {
+  content: "\e909";
+}

@@ -1,0 +1,48 @@
+
+/* Components */
+
+.listing-card--rating {
+  &:hover {
+    span {
+      text-decoration: underline;
+      color: $brand-blue;
+    }
+  }
+}
+.listing-card--img {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  img {
+    transition: all 0.25s ease-in-out;
+  }
+
+
+  span {
+    opacity: 0;
+    width: 100%;
+    padding: 4px 0;
+    display: block;
+    background-color: rgba($color: #1E2E36, $alpha: 0.85);
+    position: absolute;
+    left: 0;
+    color: #fff;
+    text-align: center;
+    transition: all 0.15s ease-in-out;
+    font-size: 14px;
+    bottom: -30px;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1); 
+    }
+
+    span {
+      opacity: 1;
+      bottom: 0;
+    }
+  }
+
+}

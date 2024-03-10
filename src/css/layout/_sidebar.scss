@@ -1,0 +1,51 @@
+.sidebar-search-overlay--inner {
+  top: 46px;
+
+  .icon {
+    min-width: 1.75rem; /* w-7 */
+  }
+
+  .icon-pin img {
+    position: relative;
+    top: 2px;
+  }
+
+  .icon-house {}
+  .icon-houses {}
+
+  .icon-chat img {
+    position: relative;
+    top: 1px;
+  }
+
+  .icon-user img {
+    position: relative;
+    top: 1px;
+  }
+ 
+}
+
+/* Overlay de recherche de base */
+.sidebar-overlay {
+  width: 320px;
+  overflow-y:scroll;
+  height: auto;
+  max-height: 60vh;
+  
+}
+
+.sidebar-overlay input[type="checkbox"] {
+  margin-top: 2px;
+}
+
+.sidebar-overlay label {
+  padding-left: 10px;
+  line-height: 1.2;
+  display: flex;
+}
+
+.sidebar-categories-input {
+  &.active {
+    border-color: $brand-primary;
+  }
+}

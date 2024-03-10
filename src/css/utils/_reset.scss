@@ -1,0 +1,33 @@
+
+
+  :focus, .form-select.active {
+  --tw-ring-color: #69af4b !important;
+  border-color: var(--tw-ring-color) !important;
+  }
+
+  .form-select.active {
+    outline: 1px solid #69af4b;
+  }
+  
+  :root {
+    --tw-ring-color: #69af4b !important;
+  
+  }
+  
+  .form-input:focus, .form-select:focus {
+    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: #69af4b !important;
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    border-color: #69af4b !important; 
+    box-shadow: var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+
+  .top-2px {
+    top: 2px;
+  }

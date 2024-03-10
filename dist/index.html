@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>Vivre en résidence</title>
+  </head>
+  <body>
+    
+    <header class="header py-5 border-b-1 border-slate-300">
+      <div class="container mx-auto">
+        <div class="flex content-center items-center lg:flex-wrap">
+          <div class="header-logo lg:pt-3 pr-12 lg:pr-10 md:block lg:flex lg:flex-col">
+            <a href="#"><img src="img/logo.svg" width="340" alt="Vivre en résidence. La réfsérence #1 en habitation pour ainés au Québec" /></a>
+            <p class="hidden lg:block mt-1 italic text-sm text-slate-400">La référence en habitation pour ainés au Québec</p>
+          </div>
+          
+
+          <div class="hidden lg:flex header-search">
+            <div class="header-region relative">
+              <div id="header-region-input" class="relative pr-15 pl-5 py-3 rounded-l-full border-slate-300 form-select header-search--regions">
+                Régions
+              </div>
+
+          
+              <div id="header-region-overlay" class="header-overlay 
+              header-region-overlay absolute opacity-0 invisible z-20 
+              bg-white rounded-lg border-2 border-slate-300 p-4">
+      
+                
+                <ul>
+                  <li class="pb-0.5">
+                    <label for="toggle-regions-checkbox">
+                      <input type="checkbox" id="toggle-regions-checkbox" class="rounded-sm" /> 
+                      <span>Toutes les régions</span>
+                    </label>
+                  </li>
+                  <li class="pb-0.5"><label for="bar2-2"><input type="checkbox" name="region" id="bar2-2" value="bar2-2" class="rounded-sm"> <span>Abitibi</span>  </label></li>
+                  <li class="pb-0.5"><label for="bar2-3"><input type="checkbox" name="region" id="bar2-3" value="bar2-3" class="rounded-sm"> <span>Bas Saint-Laurent</span>  </label></li>
+                  <li class="pb-0.5"><label for="bar-24"><input type="checkbox" name="region" id="bar-24" value="bar-24" class="rounded-sm"> <span>Capitale Nationale</span>  </label></li>
+                  <li class="pb-0.5"><label for="bar-25"><input type="checkbox" name="region" id="bar-25" value="bar-25" class="rounded-sm"> <span>Estrie</span>  </label></li>
+                </ul>
+
+
+                <hr class="my-1"> 
+
+                <ul>
+                  <li class="pb-0.5"><label for="bar-26"><input type="checkbox" name="region" id="bar-26" value="bar-26" class="rounded-sm"> <span>Ottawa</span>  </label></li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="header-secteur relative">
+              <div id="header-secteur-input" class="pr-15 pl-5 py-3 border-slate-300 form-select border-l-0 border-r-0 header-search--secteurs">
+                Secteurs et villes
+              </div>
+
+              <div 
+                id="header-secteur-overlay" 
+                class="header-overlay 
+                      header-secteur-overlay 
+                      absolute opacity-0 
+                      invisible z-20 
+                      bg-white
+                      rounded-lg border-2 border-slate-300 p-4">
+      
+
+                <input type="text" class="
+                  form-input
+                  w-full
+                  bg-yellow-50
+                  rounded-sm
+                  mb-5
+                  border
+                  border-slate-300
+                   
+                  " placeholder="Rechercher par mots clés">
+
+                  <label for="toggle-cities-checkbox" class="mb-5">
+                    <input type="checkbox" id="toggle-cities-checkbox" class="rounded-sm" /> 
+                    <span>Toutes les villes</span>
+                  </label>
+
+                  <div class="mb-1"><strong>Ville de Québec</strong></div>
+                  <ul>
+                    <li class="pb-0.5"><label for="bar1"><input type="checkbox" name="ville" id="bar1" value="bar1" class="rounded-sm"> <span>Beauport</span> </label></li>
+                    <li class="pb-0.5"><label for="bar2"><input type="checkbox" name="ville" id="bar2" value="bar2" class="rounded-sm"> <span>Charlesbourg</span>  </label></li>
+                    <li class="pb-0.5"><label for="bar3"><input type="checkbox" name="ville" id="bar3" value="bar3" class="rounded-sm"> <span>La Haute-Saint-Charles</span>  </label></li>
+                    <li class="pb-0.5"><label for="bar4"><input type="checkbox" name="ville" id="bar4" value="bar4" class="rounded-sm"> <span>Les Rivieres</span>  </label></li>
+                  </ul>
+
+                  <div class="mt-2 mb-1" ><strong>Municipalités</strong></div>
+                  <ul>
+                    <li class="pb-0.5"><label for="bar5"><input type="checkbox" name="ville" id="bar5" value="bar5" class="rounded-sm"> <span>Charlevoix (17)</span> </label></li>
+                    <li class="pb-0.5"><label for="bar6"><input type="checkbox" name="ville" id="bar6" value="bar6" class="rounded-sm"> <span>L'île-d'Orléan (1)</span>  </label></li>
+                    <li class="pb-0.5"><label for="bar7"><input type="checkbox" name="ville" id="bar7" value="bar7" class="rounded-sm"> <span>La Côte-de-Beaupré (14)</span>  </label></li>
+                    <li class="pb-0.5"><label for="bar8"><input type="checkbox" name="ville" id="bar8" value="bar8" class="rounded-sm"> <span>La Jacques-Cartier (3)</span>  </label></li>
+                    <li class="pb-0.5"><label for="bar88"><input type="checkbox" name="ville" id="bar88" value="bar88" class="rounded-sm"> <span>Portneuf (3)</span>  </label></li>
+                  </ul>
+
+                  <div class="mt-2 mb-1"><strong>Villes</strong></div>
+                  <ul>
+                    <li class="pb-0.5"><label for="bar9"><input type="checkbox" name="ville" id="bar9" value="bar9" class="rounded-sm"> <span>Beauport</span> </label></li>
+                    <li class="pb-0.5"><label for="bar10"><input type="checkbox" name="ville" id="bar10" value="bar10" class="rounded-sm"> <span>Charlesbourg</span>  </label></li>
+                    <li class="pb-0.5"><label for="bar11"><input type="checkbox" name="ville" id="bar11" value="bar11" class="rounded-sm"> <span>La Haute-Saint-Charles</span>  </label></li>
+                    <li class="pb-0.5"><label for="bar12"><input type="checkbox" name="ville" id="bar12" value="bar12" class="rounded-sm"> <span>Les Rivieres</span>  </label></li>
+                  </ul>
+              </div>
+            </div>
+
+            <div class="header-search--icon border px-3 py-3 pr-4 flex items-center border-slate-300 rounded-r-full cursor-pointer hover:border-green">
+              <svg id="Search" xmlns="http://www.w3.org/2000/svg" width="23.833" height="23.832" viewBox="0 0 23.833 23.832">
+                <path d="M305.2,301.922l-5.678-5.679a10.931,10.931,0,0,1-3.282,3.281l5.679,5.679a2.32,2.32,0,0,0,3.281-3.281Z" transform="translate(-282.043 -282.051)"/>
+                <path d="M18.565,9.282a9.282,9.282,0,1,0-9.282,9.282A9.282,9.282,0,0,0,18.565,9.282ZM9.283,16.243a6.961,6.961,0,1,1,6.962-6.961A6.969,6.969,0,0,1,9.283,16.243Z" transform="translate(-0.001)"/>
+                <path d="M75.817,81.23h1.547a3.872,3.872,0,0,1,3.868-3.868V75.816A5.421,5.421,0,0,0,75.817,81.23Z" transform="translate(-72.134 -72.133)"/>
+              </svg>
+            </div>
+            
+          </div>
+
+          <a href="#" class="header-chat relative hidden lg:flex">
+            <div class="header-chat--default flex items-center absolute">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="31" viewBox="0 0 36 31">
+                <path d="M18,6.583c-8.357,0-15.429,4.722-15.429,10.333,0,3.007,2.01,5.873,5.485,7.851L9.8,25.776l-.543,1.938a14.622,14.622,0,0,1-1.407,3.472,19.887,19.887,0,0,0,5.525-3.451l.864-.767,1.146.121A22.708,22.708,0,0,0,18,27.25c8.357,0,15.429-4.722,15.429-10.333S26.357,6.583,18,6.583ZM36,16.917c0,7.144-8.056,12.917-18,12.917a27.624,27.624,0,0,1-2.913-.161,21.989,21.989,0,0,1-9.24,4.884A16.442,16.442,0,0,1,3.556,35h-.1a.934.934,0,0,1-.864-.767v-.021c-.1-.505.24-.807.543-1.17a12.827,12.827,0,0,0,3.657-6.014C2.652,24.667,0,21.014,0,16.917,0,9.772,8.057,4,18,4h0c9.944,0,18,5.772,18,12.917Z" transform="translate(-0.001 -4)" fill="#69af4b"/>
+              </svg>
+              <p class="relative -top-1">
+                <strong class="block">Besoin d'aide?</strong>
+                C'est gratuit!
+              </p>
+            </div>
+            <div class="header-chat--hover flex items-center absolute ">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="31" viewBox="0 0 36 31">
+                <path d="M36,16.915c0,7.143-8.056,12.915-18,12.915a27.627,27.627,0,0,1-2.913-.161,21.99,21.99,0,0,1-9.24,4.883A16.444,16.444,0,0,1,3.556,35a.928.928,0,0,1-.964-.767v-.021c-.1-.5.24-.807.543-1.17a12.825,12.825,0,0,0,3.657-6.013C2.652,24.664,0,21.012,0,16.915,0,9.791,8.057,4,18,4S36,9.772,36,16.915Z" transform="translate(-0.001 -4)" fill="#69af4b"/>
+              </svg>
+              <p class="relative -top-4">
+                <span class="block">Parler à un </span>
+                <strong class="block text-green">Conseiller en hébergement</strong>
+              </p>
+            </div>
+          </a><!-- .header-chat -->
+
+
+          <div class="flex lg:hidden ml-auto right-5 top-6 absolute">
+            <div class="space-y-2">
+              <button class="btn-mobile-navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20">
+                 <path d="M24,21v2a1.007,1.007,0,0,1-1,1H1a1.007,1.007,0,0,1-1-1V21a1.007,1.007,0,0,1,1-1H23A1.007,1.007,0,0,1,24,21Zm0-8v2a1.007,1.007,0,0,1-1,1H1a1.007,1.007,0,0,1-1-1V13a1.007,1.007,0,0,1,1-1H23A1.007,1.007,0,0,1,24,13Zm0-8V7a1.007,1.007,0,0,1-1,1H1A1.007,1.007,0,0,1,0,7V5A1.007,1.007,0,0,1,1,4H23A1.007,1.007,0,0,1,24,5Z" transform="translate(0 -4)" fill="#69af4b"/>
+                </svg>  
+              </button>        
+            </div>
+          </div>
+
+        </div><!-- flex box -->
+
+
+      </div><!-- container -->
+
+  
+    </header><!-- header -->
+
+
+    <div class="inline-block md:hidden bg-gray-600 w-full py-9 px-4">
+      <div class="container">
+       <h2 class="text-2xl text-green mb-5 w-full text-center">Recherche de résidences</h2>
+
+        <form class="">
+          <div class="relative mobile-search-form">
+            <input id="mobile-search-input" type="text" class="mobile-search-input pl-3 pr-9 py-3 rounded-lg border-slate-300 form-input w-full" placeholder="Mots clés (résidences, villes et plus)" />
+            <i class="absolute text-md right-4 icon-pin text-green"></i>
+          </div>
+
+          <div id="mobile-search-overlay" class="opacity-0 invisible">
+            <!--
+              Command palette, show/hide based on modal state.
+
+              Entering: "ease-out duration-300"
+                From: "opacity-0 scale-95"
+                To: "opacity-100 scale-100"
+              Leaving: "ease-in duration-200"
+                From: "opacity-100 scale-100"
+                To: "opacity-0 scale-95"
+            -->
+            <div class="mobile-search-overlay--inner w-full absolute z-20 mx-auto max-w-3xl transform divide-y divide-gray-100 overflow-hidden rounded-b bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all ">
+
+
+              <!-- Default state, show/hide based on command palette state. -->
+              <ul class="max-h-80 scroll-py-2 divide-y divide-gray-100 overflow-y-auto">
+
+                <li class="p-2">
+                  <!-- <h2 class="mb-2 mt-4 px-3 text-xs font-semibold text-gray-500">Recent searches</h2> -->
+                  <ul class="text-sm text-gray-700">
+
+                    <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+                      <!-- Active: "text-white", Not Active: "text-gray-400" -->
+                      <div class="h-7 w-7 text-center text-lg">
+                        <i class="icon-pin inline-block text-green group-hover:text-white"></i>
+                       </div>
+                      <span class="ml-3 flex-auto truncate"><strong>Mont</strong>réal</span>
+                      <!-- Not Active: "hidden" -->
+                    </li>
+
+
+                    <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+
+                      <div class="h-7 w-7 text-center text-lg">
+                        <i class="icon-pin inline-block text-green group-hover:text-white"></i>
+                       </div>
+                      <span class="ml-3 flex-auto truncate">  <strong>Mont</strong>érégie</span>
+                    </li>
+
+                    <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+
+                      <div class="h-7 w-7 text-center text-lg">
+                        <i class="icon-house inline-block text-green group-hover:text-white"></i>
+                       </div>
+                      <span class="ml-3 flex-auto truncate">Manoir <strong>Mont</strong>érégie</span>
+                    </li>
+
+                    <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+
+                      <div class="h-7 w-7 text-center text-lg">
+                        <i class="icon-houses inline-block text-green group-hover:text-white"></i>
+                       </div>
+                      <span class="ml-3 flex-auto truncate">Selection <strong>Mont</strong>érégie</span>
+                    </li>
+
+                    <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+
+                      <div class="h-7 w-7 text-center text-lg">
+                        <i class="icon-comment inline-block text-green group-hover:text-white"></i>
+                       </div>
+                      <span class="ml-3 flex-auto truncate">Parler à un conseiller à <strong>Mont</strong>réal</span>
+                    </li>
+
+                     <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+
+                      <div class="h-7 w-7 text-center text-lg">
+                        <i class="icon-user-circle-o inline-block text-green group-hover:text-white"></i>
+                       </div>
+                      <span class="ml-3 flex-auto truncate">Emplois en résidences à <strong>Mont</strong>réal</span>
+                    </li>
+
+                  </ul>
+                </li>
+
+                
+
+            
+              </ul>
+
+             <!-- pattern #1 -->
+
+            
+            </div>
+          </div>
+
+          <div class="text-center w-full mt-3">
+            <button class="bg-green text-white rounded-full py-3 px-5 font-bold">Trouver</button>
+          </div>
+          
+        </form> 
+
+
+      </div>
+      
+    </div>
+
+    <div class="header-menu border-b-1 border-slate-300 hidden lg:flex ">
+      <div class="container mx-auto">
+        <ul class="flex flex-col md:flex-row justify-between list-hover main-menu">
+          <li class="mr-2 group">
+            <a href="#" class="block py-4">Résidences pour personnes âgés</a> <!-- group-hover:underline -->
+
+            <div class="submenu z-20">
+              <div class="ver-border"><span></span></div>
+              <div class="block bg-white border border-slate-300 border-t-0 p-5 rounded rounded-t-none shadow-lg transition ease-out duration-200 gap-5">
+                <ul class="columns-2">
+                  <li><a href="#">Résidence pour aîné (RPA)</a></li>
+                  <li><a href="#">Appartements pour retraités</a></li>
+                  <li><a href="#">Condos à vendre pour retraités</a></li>
+                  <li><a href="#">Court séjour & Convalescence</a></li>
+                  <li><a href="#">Résidences en promotion!</a></li>
+                  <li><a href="#">Nouvelles constructions</a></li>
+                  <li><a href="#">Groupe de résidences</a></li>
+                  <li><a href="#">Résidences avec soins</a></li>
+                  <li><a href="#">Conseillers en hébergement</a></li>
+                  <li><a href="#">Soins à domicile</a></li>
+                  <li><a href="#">Ressources intermédiaire (RI)</a></li>
+                  <li><a href="#">Résidences pour personnes avec pertes cognitives (Alzheimer)</a></li>
+                  <li><a href="#">CHSLD</a></li>
+                </ul> 
+             </div>
+            </div>
+          </li>
+          <li class="mr-2"><a href="#" class="block py-4">Conseillers en résidence</a></li>
+          <li class="mr-2">
+            
+            <a href="#" class="block py-4">Emplois en résidence</a>
+
+            <div class="submenu z-20">
+              <div class="ver-border"><span></span></div>
+              <div class="block bg-white border border-slate-300 border-t-0 p-5 rounded rounded-t-none shadow-lg transition ease-out duration-200 gap-5">
+                <ul class="columns-1">
+                  <li><a href="#">Altertes de nouveaux emplois</a></li>
+                  <li><a href="#">Emplois de préposé(e)s</a></li>
+                  <li><a href="#">Emplois en soins infirmiers</a></li>
+                  <li><a href="#">Emplois en entretien</a></li>
+                  <li><a href="#">Emplois en administration</a></li>
+                  <li><a href="#">Emplois en loisirs</a></li>
+                  <li><a href="#">Emplois à Montréal</a></li>
+                  <li><a href="#">Emplois à Laval</a></li>
+                  <li><a href="#">Emplois à Sherbrooke</a></li>
+                  <li><a href="#">Emplois à Trois-Rivières</a></li>
+                  <li><a href="#">Emplois à Québec</a></li>
+                  <li><a href="#">Emplois à Lévis</a></li>
+                  <li><a href="#">Emplois à Gatineau</a></li>
+                  <li><a href="#">Tous les emplois en résidences </a></li>
+                </ul> 
+             </div>
+            </div>
+          
+          </li>
+          <li class="mr-2">
+            <a href="#" class="block py-4">Services pour retraités</a>
+
+            <div class="submenu z-20">
+              <div class="ver-border"><span></span></div>
+              <div class="block bg-white border border-slate-300 border-t-0 p-5 rounded rounded-t-none shadow-lg transition ease-out duration-200 gap-5">
+                <ul class="columns-1 smaller">
+                  <li><a href="#">Activités et loisirs </a></li>
+                  <li><a href="#">Conseillers en hébergement </a></li>
+                  <li><a href="#">Santé</a></li>
+                  <li><a href="#">Soins à domicile </a></li>
+                  <li><a href="#">Déménagement </a></li>
+                  <li><a href="#">Services financiers </a></li>
+                </ul> 
+             </div>
+            </div>
+          
+          </li>
+          <li class="mr-2">
+            
+            <a href="#" class="block py-4">Ressources & Blogue</a>
+            <div class="submenu z-20">
+              <div class="ver-border"><span></span></div>
+              <div class="block bg-white border border-slate-300 border-t-0 p-5 rounded rounded-t-none shadow-lg transition ease-out duration-200 gap-5">
+                <ul class="columns-1 smaller">
+                  <li><a href="#">Actualité</a></li>
+                  <li><a href="#">Choisir votre résidence</a></li>
+                  <li><a href="#">Finance</a></li>
+                  <li><a href="#">Santé et mieux être</a></li>
+                  <li><a href="#">Soins à domicile</a></li>
+                </ul> 
+             </div>
+            </div>
+          
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hidden lg:flex header-banner bg-gray-100 py-5 border-b-1 border-slate-300 justify-center">
+      <a href="#"><img src="img/tmp/sendgrid_640.jpg" /></a>
+    </div>
+
+    <div class="container mx-auto pt-8 lg:pt-9">
+
+      <div class="flex w-full flex-col-reverse lg:flex-row">
+        <div class="sidebar">
+          <div class="hidden md:block bg-gray-100 rounded-lg border border-slate-300 p-4">
+            <h2 class="text-xl font-bold">Votre recherche</h2>
+
+            <div class="mt-2 mb-4">
+              <button class="py-0.5 px-1 pr-0.5 shadow-md border border-green no-underline rounded text-white text-xs bg-green hover:text-black hover:border-red-500 hover:bg-red-100 focus:outline-none active:shadow-none mr-2">Montréal <span class="font-bold text-black m-1">&times;</span></button>
+            </div>
+
+            <form class="mt-2 relative">
+
+              <div class="relative z-50">
+                <input type="text" id="sidebar-search-input" class="sidebar-search-input pr-15 pl-3 py-3 mb-3 rounded-lg border-slate-300 form-input w-full" placeholder="Mots clés (residences, villes, etc)" />
+           
+                <div id="sidebar-search-overlay" class="opacity-0 invisible">
+                  <!--
+                    Command palette, show/hide based on modal state.
+
+                    Entering: "ease-out duration-300"
+                      From: "opacity-0 scale-95"
+                      To: "opacity-100 scale-100"
+                    Leaving: "ease-in duration-200"
+                      From: "opacity-100 scale-100"
+                      To: "opacity-0 scale-95"
+                  -->
+                  <div class="sidebar-search-overlay--inner w-full absolute z-20 mx-auto max-w-3xl transform divide-y divide-gray-100 overflow-hidden rounded-b bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all ">
+
+
+                    <!-- Default state, show/hide based on command palette state. -->
+                    <ul class="max-h-80 scroll-py-2 divide-y divide-gray-100 overflow-y-auto">
+
+                      <li class="p-2">
+                        <!-- <h2 class="mb-2 mt-4 px-3 text-xs font-semibold text-gray-500">Recent searches</h2> -->
+                        <ul class="text-sm text-gray-700">
+  
+                          <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+                            <!-- Active: "text-white", Not Active: "text-gray-400" -->
+                            <div class="h-7 w-7 text-center text-lg">
+                              <i class="icon-pin inline-block text-green group-hover:text-white"></i>
+                             </div>
+                            <span class="ml-3 flex-auto truncate"><strong>Mont</strong>réal</span>
+                            <!-- Not Active: "hidden" -->
+                          </li>
+
+ 
+                          <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+
+                            <div class="h-7 w-7 text-center text-lg">
+                              <i class="icon-pin inline-block text-green group-hover:text-white"></i>
+                             </div>
+                            <span class="ml-3 flex-auto truncate">  <strong>Mont</strong>érégie</span>
+                          </li>
+
+                          <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+
+                            <div class="h-7 w-7 text-center text-lg">
+                              <i class="icon-house inline-block text-green group-hover:text-white"></i>
+                             </div>
+                            <span class="ml-3 flex-auto truncate">Manoir <strong>Mont</strong>érégie</span>
+                          </li>
+
+                          <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+
+                            <div class="h-7 w-7 text-center text-lg">
+                              <i class="icon-houses inline-block text-green group-hover:text-white"></i>
+                             </div>
+                            <span class="ml-3 flex-auto truncate">Selection <strong>Mont</strong>érégie</span>
+                          </li>
+
+                          <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+
+                            <div class="h-7 w-7 text-center text-lg">
+                              <i class="icon-comment inline-block text-green group-hover:text-white"></i>
+                             </div>
+                            <span class="ml-3 flex-auto truncate">Parler à un conseiller à <strong>Mont</strong>réal</span>
+                          </li>
+
+                           <li class="group flex cursor-default select-none items-center rounded px-3 py-2 hover:bg-green hover:text-white">
+
+                            <div class="h-7 w-7 text-center text-lg">
+                              <i class="icon-user-circle-o inline-block text-green group-hover:text-white"></i>
+                             </div>
+                            <span class="ml-3 flex-auto truncate">Emplois en résidences à <strong>Mont</strong>réal</span>
+                          </li>
+
+                        </ul>
+                      </li>
+
+                      
+
+                  
+                    </ul>
+
+                   <!-- pattern #1 -->
+
+                  
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="sidebar-regions relative">
+                <div id="sidebar-regions-input" class="sidebar-regions-input pr-15 pl-3 py-3 rounded-t border border-b-0 border-slate-300 form-select w-4/5 cursor-pointer">
+                 Régions
+                </div>
+  
+                <div 
+                  id="sidebar-regions-overlay" 
+                  class="search-overlay
+                        sidebar-overlay 
+                        absolute opacity-0 
+                        invisible z-20 
+                        mt-3 
+                        bg-white
+                        rounded-lg border-2 border-slate-300 p-4">
+
+                  <ul>
+                    <li class="flex pb-2"><input type="checkbox" id="region-1" class="rounded-sm"> <label for="region-1">Ajouter les régions </label></li>
+                  
+                  </ul>
+                </div>
+              </div>
+
+              <div class="sidebar-secteurs relative">
+                <div id="sidebar-secteurs-input" class="sidebar-secteurs-input pr-15 pl-3 py-3 rounded-b mb-3 border border-slate-300 form-select w-4/5 cursor-pointer">
+                 Secteurs et villes
+                </div>
+  
+                <div 
+                  id="sidebar-secteurs-overlay" 
+                  class="search-overlay
+                        sidebar-overlay 
+                        absolute opacity-0 
+                        invisible z-20 
+                        bg-white
+                        rounded-lg border-2 border-slate-300 p-4">
+
+                  <ul>
+                    <li class="flex pb-2"><input type="checkbox" id="secteur-1" class="rounded-sm"> <label for="secteur-1">Ajouter les secteurs </label></li>
+                  
+                  </ul>
+                </div>
+              </div>
+
+              <div class="sidebar-categories relative">
+                <div id="sidebar-categories-input" class="sidebar-categories-input pr-15 pl-3 py-3 rounded mb-3 border border-slate-300 form-select w-4/5 cursor-pointer">
+                 Catégories
+                </div>
+  
+                <div 
+                  id="sidebar-categories-overlay" 
+                  class="search-overlay
+                        sidebar-overlay 
+                        absolute opacity-0 
+                        invisible z-20 
+                        bg-white
+                        rounded-lg border-2 border-slate-300 p-4">
+
+                  <ul>
+                    <li class="flex pb-2"><input type="checkbox" id="service-1" class="rounded-sm"> <label for="service-1">Résidences privées pour aînés (RPA) </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences pour personnes autonomes </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences pour personnes semi-autonomes </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences avec court-séjour et convalescence </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences pour personnes Alzheimer et avec pertes cognitives</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Déficience intellectuelle et/ou physique</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences avec service en santé mentale </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Appartements pour retraités </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Appartements 55+</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Condos pour retraités à vendre</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences en construction </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Nouvelles résidences</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences évolutives </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Ressources Intermédiaires (RI) </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>CHSLD (Centres d’hébergement et de soins de longue durée) </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences pour personnes non-autonomes </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Habitations communautaires (OSBL)</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Coopérative d'habitation</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Habitations à loyer modique pour aînés (HLM)</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Nouvelles résidences</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences en construction </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences en promotion</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences avec portes ouvertes </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences avec soins </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences qui acceptent les animaux</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences à prix modique </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Maison des aînés (MDA)</label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Résidences près de moi </label></li>
+                    <li class="flex pb-2"><input type="checkbox" class="rounded-sm"> <label>Emploi en résidence </label></li>
+                  </ul>
+                </div>
+              </div>
+
+          
+              <div id="js-sidebar-criterias"class="h-0 invisible opacity-0">
+
+                <div class="py-3">
+
+                  <div class="sidebar-unites relative">
+                    <div id="sidebar-unites-input" class="sidebar-unites-input pr-15 pl-3 py-3 rounded-t border border-b-0 border-slate-300 form-select w-4/5 cursor-pointer">
+                     Unités
+                    </div>
+      
+                    <div 
+                      id="sidebar-unites-overlay" 
+                      class="search-overlay
+                            sidebar-overlay 
+                            absolute opacity-0 
+                            invisible z-20 
+                            mt-3 
+                            bg-white
+                            rounded-lg border-2 border-slate-300 p-4">
+    
+                      <ul>
+                        <li class="flex pb-2"><input type="checkbox" id="unite-1" class="rounded-sm"> <label for="unite-1">Ajouter les unités </label></li>
+                      
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="sidebar-reconnaissance relative">
+                    <div id="sidebar-reconnaissance-input" class="sidebar-reconnaissance-input pr-15 pl-3 py-3 border border-b-0 border-slate-300 form-select w-4/5 cursor-pointer">
+                     Reconnaissance
+                    </div>
+      
+                    <div 
+                      id="sidebar-reconnaissance-overlay" 
+                      class="search-overlay
+                            sidebar-overlay 
+                            absolute opacity-0 
+                            invisible z-20 
+                            mt-3 
+                            bg-white
+                            rounded-lg border-2 border-slate-300 p-4">
+    
+                      <ul>
+                        <li class="flex pb-2"><input type="checkbox" id="reco-1" class="rounded-sm"> <label for="reco-1">Ajouter les reconnaissnace </label></li>
+                      
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="sidebar-servicesessentiels relative">
+                    <div id="sidebar-servicesessentiels-input" class="sidebar-servicesessentiels-input pr-15 pl-3 py-3 border border-b-0 border-slate-300 form-select w-4/5 cursor-pointer">
+                     Services Essentiels
+                    </div>
+      
+                    <div 
+                      id="sidebar-servicesessentiels-overlay" 
+                      class="search-overlay
+                            sidebar-overlay 
+                            absolute opacity-0 
+                            invisible z-20 
+                            mt-3 
+                            bg-white
+                            rounded-lg border-2 border-slate-300 p-4">
+    
+                      <ul>
+                        <li class="flex pb-2"><input type="checkbox" id="services-essentiels-1" class="rounded-sm"> <label for="services-essentiels-1">Ajouter les services essentiels </label></li>
+                      
+                      </ul>
+                    </div>
+                  </div>
+
+                  <select class="pr-15 pl-3 py-3 border-slate-300 form-select w-4/5 border-x">
+                    <option>Prix maximum</option>
+                    <option>500$</option>
+                    <option>750$</option>
+                    <option>1000$</option>
+                    <option>1500$</option>
+                    <option>2000$</option>
+                    <option>3000$</option>
+                    <option>4000$</option>
+                    <option>5000$ et +</option>
+                  </select>
+
+                  <div class="sidebar-promotions relative">
+                    <div id="sidebar-promotions-input" class="sidebar-promotions-input pr-15 pl-3 py-3 rounded-b border border-t-0 border-slate-300 form-select w-4/5 cursor-pointer">
+                     Promotions
+                    </div>
+      
+                    <div 
+                      id="sidebar-promotions-overlay" 
+                      class="search-overlay
+                            sidebar-overlay 
+                            absolute opacity-0 
+                            invisible z-20 
+                            mt-3 
+                            bg-white
+                            rounded-lg border-2 border-slate-300 p-4">
+    
+                      <ul>
+                        <li class="flex pb-2"><input type="checkbox" id="promotions-1" class="rounded-sm"> <label for="promotions-1">Ajouter les promotions </label></li>
+                      
+                      </ul>
+                    </div>
+                  </div>
+
+                </div><!-- pt3-->
+              </div><!-- #js-sidebar-criterias -->
+
+              <div class="w-full">
+                <a href="#" id="js-show-sidebar-criterias" class="text-blue text-xs hover:underline">
+                  <span class="inactive">Plus de critères</span>
+                  <span class="active hidden">Moins de critères</span>
+                </a>
+              </div>
+
+            </form>
+          </div>
+
+          <a href="#" class="hidden md:block bloc-conseiller mt-8 bg-gray-100 rounded-lg border border-slate-300 hover:border-yellow-400 hover:bg-orange-100 hover:transition-all">
+            <div class="relative">
+              <img src="img/layout/call.jpg" alt="" class="img-call"/>
+              <img src="img/icons/chat.svg" alt="" class="absolute bottom-0 right-2 z-10 bloc-conseiller--icon" />
+            </div>
+            
+            <div class="p-4 pt-2 text-md leading-tight">
+              <strong>Parlez avec un conseiller </strong><br>
+              en hébergement pour ainés <br>
+              <span class="italic">(C'est gratuit!)</span>
+            </div>
+          </a>
+
+
+          <div class="hidden md:block mt-8 mb-8">
+            <ul class="menu-pills">
+              <li>
+                <a href="#" class="flex bg-gray-100 rounded-full items-center mb-1 hover:transition-all">
+                  <div class="menu-pills__icon bg-green p-4 rounded-full"><img src="img/icons/conseillers.png" /></div>
+                  <div class="menu-pills__text pl-2">Conseillers en hébergement</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex bg-gray-100 rounded-full items-center mb-1 hover:transition-all">
+                  <div class="menu-pills__icon bg-green p-4 rounded-full"><img src="img/icons/soins-domicile.png" /></div>
+                  <div class="menu-pills__text pl-2">Soins à domicile</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex bg-gray-100 rounded-full items-center mb-1 hover:transition-all">
+                  <div class="menu-pills__icon bg-green p-4 rounded-full"><img src="img/icons/demenagement.png" /></div>
+                  <div class="menu-pills__text pl-2">Déménagement</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex bg-gray-100 rounded-full items-center mb-1 hover:transition-all">
+                  <div class="menu-pills__icon bg-green p-4 rounded-full"><img src="img/icons/services.png" /></div>
+                  <div class="menu-pills__text pl-2">Services pour retraités</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-4 text-center md:mt-0 md:text-left sticky top-5">
+            <a href="#" class="inline-block"><img src="img/tmp/manulife_300_600.jpg" alt="" /></a>
+          </div>
+
+
+
+        </div><!-- sidebar -->
+        <div class="main-content">
+
+          <div class="breadcrumbs pb-8 lg:pb-10 text-sm"><a class="text-gray-500 hover:text-blue hover:underline" href="#">Accueil</a> <span class="text-gray-400">/</span> <a class="text-gray-500 hover:text-blue hover:underline" href="#">Résidences pour aînés</a> <span class="text-gray-400">/</span> <span class="text-gray-400">Montréal</span></div>
+
+          <h1 class="text-3xl md:text-4xl leading-tight text-green font-bold">Résidence pour personnes âgées à Montréal</h1>
+
+          <div class="mt-8 lg:mt-10">
+            <p>
+              Prix moyen de la vie en résidence à Montréal: <strong>1 917$ par mois* </strong><br>
+              Prix moyen d'un loyer d'une résidence avec soin: <strong>3 696$ par mois*</strong>
+            </p>
+
+            <p class="italic text-gray-500 mt-4">
+              *Prix basé sur les données du rapport de la SCHL paru en 2019
+            </p>
+
+            <div id="main-content-text-content" class="opacity-0 invisible h-0 wysiwyg">
+
+              <div class="pt-9 pb-1">
+                <h2>What Qualities Should You Look For in a Caregiver? (H2)</h2>
+
+                <p>A caregiver will spend a lot of time with the senior receiving care. That's why it's so important to find someone whose personality meshes with your loved one. Is your loved one outgoing and talkative? Choose a caregiver that enjoys chatting. Are they more reserved? Choose a caregiver who's on the quieter side.</p>
+
+                <p>Other factors you should consider when hiring or choosing a caregiver include:</p>
+
+                <div class="wysiwyg-spacing mt-3"></div>
+
+                <h3>How Much Does Medicare Cover? (H3)</h3>
+                <p>Original Medicare covers 100 percent of home health care services for qualifying individuals. That means you'll owe $0 for covered services! Just make sure you ask the home health agency what's covered and what's not. You might have to pay out of pocket for services that aren't covered by Medicare, such as meal delivery or 24-hour-a-day at-home care.</p>
+                
+                <div class="wysiwyg-spacing mt-5"></div>
+
+                <h2>Types of Caregivers (H2)</h2>
+
+                <div class="wysiwyg-spacing mt-3"></div>
+
+                <h3>Family or Unpaid Caregivers (H3)</h3>
+
+                <p>In 2015, nearly 34.2 million Americans cared for adults ages 50 or over,3 and they did it without any pay. These individuals are called family caregivers or informal caregivers. Informal caregivers don't need to be related to the senior receiving care. It could be a significant other, a close friend, or a trusted neighbor.</p>
+              </div>
+            </div>
+
+            <p class="mt-4">
+              <a href="#" id="main-content-text-btn" class="text-blue hover:underline">Lire la suite</a>
+            </p>
+
+            
+          </div>
+
+          <div class="md:bg-gray-100 mt-8 lg:mt-10 block text-center p-5 md:border-slate-300 md:border rounded-lg">
+            <a href="#" class="inline-block md:mr-5"><img src="img/tmp/pub1.jpg" alt="" /></a>
+            <a href="#" class="inline-block"><img src="img/tmp/pub2.jpg" alt="" /></a>
+          </div>
+
+          <div class="mobile-container bg-yellow-100 md:bg-transparent">
+            <div class="pt-8 pb-5 md:pb-0 md:mt-5">
+
+              <h2 class="text-2xl mb-5 md:mb-0"><strong class="text-green">En vedette</strong> à Montréal</h2>
+              
+
+              <div class="glider-contain">
+                <div class="glider js-glider-features md:grid md:grid-cols-5 md:gap-1 mt-5 bloc-vedette"> 
+                  <div>
+                    <a href="#" class="block border bg-white border-slate-300 rounded hover:text-blue hover:underline">
+                      <img src="img/tmp/residences-personnes-agees-liz-groupe-maurice-complexe-pour-retraites-2-tresgrande.jpeg" class="rounded-t"/>
+                      <div class="p-3 pr-2">
+                        <p class="text-sm font-semibold leading-tight mb-5">Sélection Retraite Rosemont test vraiment super long trop trop trop trop long</p>
+                        <img src="img/tmp/selection-retraite-logo.png" class="bloc-vedette__logo" />
+                      </div>
+                    </a>
+                  </div>
+
+                  <div>
+                    <a href="#" class="block border bg-white border-slate-300 rounded hover:text-blue hover:underline">
+                      <img src="img/tmp/residences-personnes-agees-liz-groupe-maurice-complexe-pour-retraites-2-tresgrande.jpeg" class="rounded-t"/>
+                      <div class="p-3 pr-2">
+                        <p class="text-sm font-semibold leading-tight mb-5">Sélection Retraite Rosemont test vraiment super long trop trop trop trop long</p>
+                        <img src="img/tmp/selection-retraite-logo.png" class="bloc-vedette__logo" />
+                      </div>
+                    </a>
+                  </div>
+
+                  <div>
+                    <a href="#" class="block border bg-white border-slate-300 rounded hover:text-blue hover:underline">
+                      <img src="img/tmp/residences-personnes-agees-liz-groupe-maurice-complexe-pour-retraites-2-tresgrande.jpeg" class="rounded-t"/>
+                      <div class="p-3 pr-2">
+                        <p class="text-sm font-semibold leading-tight mb-5">Sélection Retraite Rosemont test vraiment super long trop trop trop trop long</p>
+                        <img src="img/tmp/selection-retraite-logo.png" class="bloc-vedette__logo" />
+                      </div>
+                    </a>
+                  </div>
+
+                  <div>
+                    <a href="#" class="block border bg-white border-slate-300 rounded hover:text-blue hover:underline">
+                      <img src="img/tmp/residences-personnes-agees-liz-groupe-maurice-complexe-pour-retraites-2-tresgrande.jpeg" class="rounded-t"/>
+                      <div class="p-3 pr-2">
+                        <p class="text-sm font-semibold leading-tight mb-5">Sélection Retraite Rosemont test vraiment super long trop trop trop trop long</p>
+                        <img src="img/tmp/selection-retraite-logo.png" class="bloc-vedette__logo" />
+                      </div>
+                    </a>
+                  </div>
+
+                  <div>
+                    <a href="#" class="block border bg-white border-slate-300 rounded hover:text-blue hover:underline">
+                      <img src="img/tmp/residences-personnes-agees-liz-groupe-maurice-complexe-pour-retraites-2-tresgrande.jpeg" class="rounded-t"/>
+                      <div class="p-3 pr-2">
+                        <p class="text-sm font-semibold leading-tight mb-5">Sélection Retraite Rosemont test vraiment super long trop trop trop trop long</p>
+                        <img src="img/tmp/selection-retraite-logo.png" class="bloc-vedette__logo" />
+                      </div>
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div><!-- mobile-container -->
+            
+          </div>
+
+          <div class="hidden md:block mt-10">
+            <h2 class="text-2xl"><strong class="text-green">Nouveaux</strong> appartements et condos pour retraités à Montréal</h2>
+          </div>
+
+          <div class="hidden md:grid grid-cols-3 gap-1 mt-5">
+
+            <a href="#" class="flex p-3 group border border-slate-300 rounded">
+              <div class="w-1/3">
+                <img src="img/tmp/cornelius.jpg" />
+              </div>
+
+              <div class="w-2/3 pl-3 pt-1">
+                <p class="text-sm font-semibold leading-tight mb-0.5 group-hover:text-blue group-hover:underline">Cornelius</p>
+                <p class="line-overflow-1 text-xs">
+                  Côte-des-Neiges & Neigette
+                </p>
+                <p class="line-overflow-1 text-xs">
+                  Le Groupe Maurice
+                </p>
+              </div>
+            </a>
+
+            <a href="#" class="flex p-3 group border border-slate-300 rounded">
+              <div class="w-1/3">
+                <img src="img/tmp/cornelius.jpg" />
+              </div>
+
+              <div class="w-2/3 pl-3 pt-1">
+                <p class="text-sm font-semibold leading-tight mb-0.5 group-hover:text-blue group-hover:underline">Cornelius</p>
+                <p class="line-overflow-1 text-xs">
+                  Côte-des-Neiges & Neigette
+                </p>
+                <p class="line-overflow-1 text-xs">
+                  Le Groupe Maurice
+                </p>
+              </div>
+            </a>
+
+            <a href="#" class="flex p-3 group border border-slate-300 rounded">
+              <div class="w-1/3">
+                <img src="img/tmp/cornelius.jpg" />
+              </div>
+
+              <div class="w-2/3 pl-3 pt-1">
+                <p class="text-sm font-semibold leading-tight mb-0.5 group-hover:text-blue group-hover:underline">Cornelius</p>
+                <p class="line-overflow-1 text-xs">
+                  Côte-des-Neiges & Neigette
+                </p>
+                <p class="line-overflow-1 text-xs">
+                  Le Groupe Maurice
+                </p>
+              </div>
+            </a>
+
+            
+
+          </div>
+
+          <div class="hidden md:block mt-10">
+            <h2 class="text-2xl">421 <strong class="text-green">résidences à Montréal</strong></h2>
+          </div><!-- titre -->
+
+          <div class="hidden md:flex bg-gray-100 border border-slate-300 rounded-t-lg p-4 mt-4">
+            <div class="flex">
+              <button class="text-lg bg-white border border-slate-300 py-3 px-4 rounded-l inline-flex items-center">
+                <i class="icon-list"></i>
+                
+                <span class="pl-3 text-xs">Liste</span>
+              </button>
+
+              <button class="text-lg border border-slate-300 border-l-0 py-3 px-4 rounded-r inline-flex items-center hover:bg-white group">
+                <i class="icon-pin text-gray group-hover:text-green"></i>
+                
+                
+                <span class="pl-3 text-xs">Carte</span>
+              </button>
+            </div>
+
+            <div class="flex ml-auto items-center">
+              <span>Trier: </span>
+              <select class="ml-3 pr-15 pl-3 py-3 rounded-lg bg-gray-100 border-slate-300 form-select hover:bg-white active:bg-white">
+                <option>Recommandé</option>
+                <option>Note</option>
+                <option>Popularité</option>
+                <option>Prix</option>
+              </select>
+
+            </div>
+          </div><!-- top -->
+
+
+          <div class="block md:hidden bg-yellow-100 mobile-container mt-5 py-8">
+            <div>
+              <div class="text-2xl font-bold">Résidences à <span class="text-green">Montréal</span></div>
+              <p><span class="text-green">421</span> résidences pour aînés à Montréal</p>
+            </div>
+          </div>
+<!-- 
+          <div class="flex md:hidden bg-gray-100 border border-slate-300 rounded-t-lg p-4 mt-4">
+            <div class="flex">
+              <select class="ml-3 pr-15 pl-3 py-3 rounded-lg bg-gray-100 border-slate-300 form-select hover:bg-white active:bg-white">
+                <option>Filtrer</option>
+              </select>
+            </div>
+          </div> -->
+
+
+          <div class="listing-cards mobile-container bg-yellow-100">
+            <div><!-- do not delete this div, very important ! -->
+
+              <!-- item start -->
+              <div class="listing-card bg-white md:flex md:p-6 border rounded md:rounded-none group border-slate-300 md:border-t-0 hover:bg-yellow-50">
+                <div class="w-full md:w-1/3">
+                  
+                  <a class="relative listing-card--img" href="#">
+                  <img src="img/tmp/SR_RLQ_residence@2x.jpg" class="w-full" alt="" />
+                  <span>Voir plus de photos</span>
+                  </a>
+
+                  <a href="#" class="hidden md:inline-block bg-white border border-gray-150 p-2 rounded mt-3 group-hover:border-slate-300">
+                    <img src="img/tmp/selection-retraite-logo.png" class="w-32"/>
+                  </a>
+                </div>
+                <div class="w-full md:w-2/3 px-4 pt-6 pb-4 md:py-0 md:pl-6 md:px-0 md:pr-0">
+                  <h3 class="text-lg font-semibold"><a href="#" class="hover:underline hover:text-blue">Sélection Retraite Rosemont</a></h3>
+                  <p class="text-xs italic text-gray-500">5200, rue Molson, Montréal (Québec) H1Y 3B5</p>
+
+
+                  <p class="hidden md:block mt-4 text-sm">Profitez au maximum de votre retraite dans l’un des plus beaux quartiers de Montréal. La résidence pour aînés Sélection Retraite Rosemont vous séduira avec...</p>
+                  
+
+                  <a class="mt-4 text-sm flex items-center listing-card--rating">
+                    <i class="icon-star-full inline-block"></i>
+                    <i class="icon-star-full inline-block"></i>
+                    <i class="icon-star-full inline-block"></i>
+                    <i class="icon-star-half inline-block"></i>
+                    <i class="icon-star-empty inline-block"></i>
+                    <span class="inline-block ml-2">16 avis</span>
+                  </a>
+
+                  <p>
+                    <strong>Prix:</strong> À partir de 1 045$ par mois<br>
+                    <strong>Région:</strong> <a href="#" class="hover:underline hover:text-blue">Rosemont La Petite-Patrie</a><br>
+                    <strong>Groupe:</strong> <a href="#" class="hover:underline hover:text-blue">Sélection Retraite</a><br>
+                    <strong>Unités:</strong> 175
+                  </p>
+
+                
+                  <div class="mt-4 md:mt-5 flex flex-wrap">
+                    <a href="#" class="bg-orange-400 text-white rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-orange-700">Nouvelle construction</a>
+                    <a href="#" class="bg-orange-400 text-white rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-orange-700">En promotion</a>
+                    <a href="#" class="bg-gray-50 text-gray-500 rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-green hover:text-white">Personnes autonomes</a>
+                    <a href="#" class="bg-gray-50 text-gray-500 rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-green hover:text-white">Personnes semi-autonome</a>
+                    <a href="#" class="bg-gray-50 text-gray-500 rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-green hover:text-white">Court séjour & convalescence</a>
+                    <a href="#" class="bg-gray-50 text-gray-500 rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-green hover:text-white">Évolutive</a>
+                  </div>
+
+                  <a href="#" class="inline-block md:hidden bg-white border border-gray-150 p-2 rounded mt-4 group-hover:border-slate-300">
+                    <img src="img/tmp/selection-retraite-logo.png" class="w-32"/>
+                  </a>
+
+                </div>
+              </div><!-- item end-->
+
+
+              <div class="hidden bg-gray-150 md:block text-center py-8 px-6 border-slate-300 border-b-1 border-x">
+                <a href="#" class="inline-block"><img src="img/tmp/pub-middle.jpg" alt="" /></a>
+              </div><!-- pub -->
+
+              <!-- bloc conseiller -->
+              <div class=" px-6">
+                <a href="#" class="block md:hidden bloc-conseiller my-4 bg-gray-100 rounded-lg border border-slate-300 hover:border-yellow-400 hover:bg-orange-100 hover:transition-all">
+                  <div class="relative">
+                    <img src="img/layout/call.jpg" alt="" class="img-call"/>
+                    <img src="img/icons/chat.svg" alt="" class="absolute bottom-0 right-2 z-10 bloc-conseiller--icon" />
+                  </div>
+                  
+                  <div class="p-4 pt-2 text-md leading-tight">
+                    <strong>Parlez avec un conseiller </strong><br>
+                    en hébergement pour ainés <br>
+                    <span class="italic">(C'est gratuit!)</span>
+                  </div>
+                </a>
+              </div>
+              <!-- end bloc conseiller -->
+
+              
+              <!-- item start -->
+              <div class="listing-card bg-white md:flex md:p-6 border rounded md:rounded-none group border-slate-300 md:border-t-0 hover:bg-yellow-50">
+                <div class="w-full md:w-1/3">
+                  
+                  <a class="relative listing-card--img" href="#">
+                  <img src="img/tmp/SR_RLQ_residence@2x.jpg" class="w-full" alt="" />
+                  <span>Voir plus de photos</span>
+                  </a>
+
+                  <a href="#" class="hidden md:inline-block bg-white border border-gray-150 p-2 rounded mt-3 group-hover:border-slate-300">
+                    <img src="img/tmp/selection-retraite-logo.png" class="w-32"/>
+                  </a>
+                </div>
+                <div class="w-full md:w-2/3 px-4 pt-6 pb-4 md:py-0 md:pl-6 md:px-0 md:pr-0">
+                  <h3 class="text-lg font-semibold"><a href="#" class="hover:underline hover:text-blue">Sélection Retraite Rosemont</a></h3>
+                  <p class="text-xs italic text-gray-500">5200, rue Molson, Montréal (Québec) H1Y 3B5</p>
+
+
+                  <p class="hidden md:block mt-4 text-sm">Profitez au maximum de votre retraite dans l’un des plus beaux quartiers de Montréal. La résidence pour aînés Sélection Retraite Rosemont vous séduira avec...</p>
+                  
+
+                  <a class="mt-4 text-sm flex items-center listing-card--rating">
+                    <i class="icon-star-full inline-block"></i>
+                    <i class="icon-star-full inline-block"></i>
+                    <i class="icon-star-full inline-block"></i>
+                    <i class="icon-star-half inline-block"></i>
+                    <i class="icon-star-empty inline-block"></i>
+                    <span class="inline-block ml-2">16 avis</span>
+                  </a>
+
+                  <p>
+                    <strong>Prix:</strong> À partir de 1 045$ par mois<br>
+                    <strong>Région:</strong> <a href="#" class="hover:underline hover:text-blue">Rosemont La Petite-Patrie</a><br>
+                    <strong>Groupe:</strong> <a href="#" class="hover:underline hover:text-blue">Sélection Retraite</a><br>
+                    <strong>Unités:</strong> 175
+                  </p>
+
+                
+                  <div class="mt-4 md:mt-5 flex flex-wrap">
+                    <a href="#" class="bg-orange-400 text-white rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-orange-700">Nouvelle construction</a>
+                    <a href="#" class="bg-orange-400 text-white rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-orange-700">En promotion</a>
+                    <a href="#" class="bg-gray-50 text-gray-500 rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-green hover:text-white">Personnes autonomes</a>
+                    <a href="#" class="bg-gray-50 text-gray-500 rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-green hover:text-white">Personnes semi-autonome</a>
+                    <a href="#" class="bg-gray-50 text-gray-500 rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-green hover:text-white">Court séjour & convalescence</a>
+                    <a href="#" class="bg-gray-50 text-gray-500 rounded-sm text-xxs py-0.2 px-1 inline-block mr-0.5 mb-0.5 hover:bg-green hover:text-white">Évolutive</a>
+                  </div>
+
+                  <a href="#" class="inline-block md:hidden bg-white border border-gray-150 p-2 rounded mt-4 group-hover:border-slate-300">
+                    <img src="img/tmp/selection-retraite-logo.png" class="w-32"/>
+                  </a>
+
+                </div>
+              </div><!-- item end-->
+
+            </div><!-- mobile container -->
+          </div><!-- listing-cards -->
+
+          <div class="mobile-container bg-yellow-100 md:bg-transparent">
+
+            <div class="flex md:bg-gray-100 md:border border-slate-300 rounded-b-lg py-4 md:p-4 border-t-0 justify-center">
+              <a href="#" class="flex items-center py-3 px-3 md:px-4 bg-white border rounded-l border-gray-300 hover:bg-gray-100 hover:text-green"><i class="icon-chevron-left"></i></a>
+              <a href="#" class="flex py-3 px-3 md:px-4 bg-white border-y border-r border-gray-300 hover:bg-gray-100 hover:text-green">1</a>
+              <a href="#" class="flex py-3 px-3 md:px-4 bg-white border-y border-r border-gray-300 hover:bg-gray-100 hover:text-green">2</a>
+              <a href="#" class="flex py-3 px-3 md:px-4 bg-white border-y border-r border-gray-300 hover:bg-gray-100 hover:text-green">3</a>
+              <a href="#" class="flex py-3 px-3 md:px-4 bg-white border-y border-r border-gray-300 hover:bg-gray-100 hover:text-green">4</a>
+              <a href="#" class="flex py-3 px-3 md:px-4 bg-white border-y border-r border-gray-300 hover:bg-gray-100 hover:text-green">5</a>
+              <a href="#" class="flex py-3 px-3 md:px-4 bg-white border-y border-r border-gray-300 hover:bg-gray-100 hover:text-green">...</a>
+              <a href="#" class="flex py-3 px-3 md:px-4 bg-white border-y border-r border-gray-300 hover:bg-gray-100 hover:text-green">14</a>
+              <a href="#" class="flex items-center py-3 px-3 md:px-4 bg-white border-y border-r rounded-r border-gray-300 hover:bg-gray-100 hover:text-green"><i class="icon-chevron-right"></i></a>
+            </div><!-- pagination -->
+          </div>
+
+
+          <div class="text-2xl leading-tight mt-10 mb-8">Recherches associées</div>
+
+          <a href="#" class="flex bg-gray-100 p-3 mb-3 rounded-lg group">
+            <i class="icon-search mt-1 text-md text-gray  group-hover:text-green"></i><span class="text-md ml-1 md:ml-3 group-hover:underline">Appartements pour retraités <strong>Montréal</strong></span>
+          </a>
+
+          <a href="#" class="flex bg-gray-100 p-3 mb-3 rounded-lg group">
+            <i class="icon-search mt-1 text-md text-gray group-hover:text-green"></i><span class="text-md ml-1 md:ml-3 group-hover:underline">Condos à vendre pour retraités <strong>Montréal</strong></span>
+          </a>
+
+          <a href="#" class="flex bg-gray-100 p-3 mb-3 rounded-lg group">
+            <i class="icon-search mt-1 text-md text-gray group-hover:text-green"></i><span class="text-md ml-1 md:ml-3 group-hover:underline">Résidence pour ainés <strong>autonome Montréal</strong></span>
+          </a>
+
+          <a href="#" class="flex bg-gray-100 p-3 mb-3 rounded-lg group">
+            <i class="icon-search mt-1 text-md text-gray group-hover:text-green"></i><span class="text-md ml-1 md:ml-3 group-hover:underline">Résidence pour ainés <strong>semi-autonome Montréal</strong></span>
+          </a>
+
+          <a href="#" class="flex bg-gray-100 p-3 mb-3 rounded-lg group">
+            <i class="icon-search mt-1 text-md text-gray group-hover:text-green"></i><span class="text-md ml-1 md:ml-3 group-hover:underline">Parler à un <strong>Conseillers en hébergement</strong></span>
+          </a>
+
+          <a href="#" class="flex bg-gray-100 p-3 mb-3 rounded-lg group">
+            <i class="icon-search mt-1 text-md text-gray group-hover:text-green"></i><span class="text-md ml-1 md:ml-3 group-hover:underline">Résidences pour ainés <strong>près de moi (géolocalisé)</strong></span>
+          </a>
+
+          <a href="#" class="flex bg-gray-100 p-3 mb-3 rounded-lg group">
+            <i class="icon-search mt-1 text-md text-gray group-hover:text-green"></i><span class="text-md ml-1 md:ml-3 group-hover:underline">Résidences pour ainés <strong>Côte-des-Neiges & Notre-Dame-de-Grâce</strong></span>
+          </a>
+
+          <a href="#" class="flex bg-gray-100 p-3 mb-3 rounded-lg group">
+            <i class="icon-search mt-1 text-md text-gray group-hover:text-green"></i><span class="text-md ml-1 md:ml-3 group-hover:underline">Résidences pour ainés <strong>Ahuntsic & Cartierville</strong></span>
+          </a>
+
+          <a href="#" class="flex bg-gray-100 p-3 mb-3 rounded-lg group">
+            <i class="icon-search mt-1 text-md text-gray group-hover:text-green"></i><span class="text-md ml-1 md:ml-3 group-hover:underline">Résidences pour ainés <strong>Mercier, Hochelaga & Maisonneuve</strong></span>
+          </a>
+
+        </div><!-- main-content -->
+      </div><!-- grid -->
+
+
+    </div><!-- container-->
+
+    <div class="bg-gray-150 block text-center p-6 border-slate-300 border-y mt-10 md:mt-12">
+      <a href="#"><img src="img/tmp/videotron.jpg" class="inline-block" /></a>
+    </div>
+
+    <footer class="footer bg-gray-600 md:bg-transparent py-0 md:py-11">
+
+      <div class="container flex flex-col md:block">
+
+        <div class="
+          bg-white
+          md:bg-transparent
+          order-2 md:order-1
+          mb-[-1px]
+          
+          -mx-4
+          px-4
+
+          md:-mx-0
+          md:px-0
+
+          ">
+          <div class="header-logo mt-8 pr-10 block">
+            <a href="#"><img src="img/logo.svg" width="340" alt="Vivre en résidence - La référence #1 en habitation pour ainés au Québec" /></a>
+            <p class="mt-1 italic text-sm text-slate-400">La référence #1 en habitation pour ainés au Québec</p>
+          </div>
+
+          <p class="hidden md:block pt-9">Le seul site avec toutes les résidences pour aînés au Québec.</p>
+        </div>
+
+        <div class="footer-menu block md:grid grid-cols-2 md:grid-cols-4 gap-9 mt-9 mb-10.5">
+           <div class="mb-5">
+            <p class="font-bold mb-5 ">Navigation </p>
+
+            <ul>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Accueil</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Abonner votre résidences</a></li> 
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Annoncer chez nous </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Guide se loger </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Emplois en résidence</a></li> 
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Blogue </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> À propos </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Plan de site </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Nous joindre</a></li>
+            </ul>
+          </div>
+
+           <div class="mb-5">
+            <p class="font-bold mb-5">Habitation pour ainés </p>
+
+            <ul>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Habitation pour ainés</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Résidences pour ainés</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Appartement pour retraités</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Condos pour retraités</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Résidences avec soin</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Conseillers en hébergement</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Placement urgent</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> CLSC</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> CISSS et CIUSSS</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Ressources Intermédiaire (RI)</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Associations et organisations</a></li>
+            </ul>
+          </div>
+
+           <div class="md:mb-5">
+            <p class="font-bold mb-5">Groupes de résidences </p>
+
+            <ul>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Château Bellevue</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Chartwell Groupe</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Édifio Groupe</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Immobilier Globale</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Groupe La Belle Époque </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Groupe Morzaco </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Groupe des Bâtisseurs </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Le Groupe Maurice</a></li>
+            </ul>
+            
+
+          </div>
+
+           <div class="mb-5">
+
+            <ul class="md:mt[42.5px]">
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Le Groupe Résidences Excellence </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Les Résidences Enharmonie</a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Les Résidences et CHSLD Au Cœur de la Vie </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Mandala Santé </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Sélection Retraite </a></li>
+              <li><a href="#"><i class="inline-block md:hidden icon-caret-right mr-1"></i> Tous les groupes de résidence</a></li>
+            </ul>
+            
+
+          </div>
+
+
+        </div>
+
+        <div class="md:hidden -mx-4">
+          <div class="ver-border"><span></span></div>
+        </div>
+
+        <p class="
+          py-8  md:py-0 
+          bg-white
+          md:bg-transparent
+          order-3
+          text-sm md:text-base text-gray-400
+
+          -mx-4
+          px-4
+
+          md:-mx-0
+          md:px-0
+         ">
+        
+          Le site numéro 1 au Québec depuis 2010 <br>
+          2010-2021 © Vivre en résidence. Tous droits réservés.
+        </p>
+
+      </div>
+    </footer>
+ 
+
+    <div class="mobile-navigation w-full h-full overflow-y-scroll fixed invisible opacity-0 bg-white">
+
+      <ul>
+        <li>
+            <a href="#" class="block px-5 py-4 hover:text-green border-b-1 border-gray-300"><i class="icon-chevron-right mr-3 text-green inline-block"></i> Résidences pour aînés</a>
+            <ul class="hidden bg-yellow-100 px-5 py-3 invisible opacity-0">
+              <li class="py-1"><a href="#">Résidence pour aîné (RPA)</a></li>
+              <li class="py-1"><a href="#">Appartements pour retraités</a></li>
+              <li class="py-1"><a href="#">Condos à vendre pour retraités</a></li>
+              <li class="py-1"><a href="#">Court séjour & Convalescence</a></li>
+              <li class="py-1"><a href="#">Résidences en promotion!</a></li>
+              <li class="py-1"><a href="#">Nouvelles constructions</a></li>
+              <li class="py-1"><a href="#">Groupe de résidences</a></li>
+              <li class="py-1"><a href="#">Résidences avec soins</a></li>
+              <li class="py-1"><a href="#">Soins à domicile</a></li>
+              <li class="py-1"><a href="#">Ressources intermédiaire (RI)</a></li>
+              <li class="py-1"><a href="#">Résidences pour personnes avec pertes cognitives (Alzheimer)</a></li>
+              <li class="py-1"><a href="#">CHSLD</a></li>
+            </ul>
+        </li>
+        <li>
+          <a href="https://google.com" class="block px-5 py-4 hover:text-green border-b-1 border-gray-300"><i class="icon-chevron-right mr-3 text-green inline-block"></i> Conseillers en hébergement</a>
+        
+       </li>
+       <li>
+          <a href="#" class="block px-5 py-4 hover:text-green border-b-1 border-gray-300"><i class="icon-chevron-right mr-3 text-green inline-block"></i> Emploi en résidence</a>
+          <ul class="hidden bg-yellow-100 px-5 py-3 invisible opacity-0">
+            <li class="py-1"><a href="#">Altertes de nouveaux emplois</a></li>
+            <li class="py-1"><a href="#">Emplois de préposé(e)s</a></li>
+            <li class="py-1"><a href="#">Emplois en soins infirmiers</a></li>
+            <li class="py-1"><a href="#">Emplois en entretien</a></li>
+            <li class="py-1"><a href="#">Emplois en administration</a></li>
+            <li class="py-1"><a href="#">Emplois en loisirs</a></li>
+            <li class="py-1"><a href="#">Emplois à Montréal</a></li>
+            <li class="py-1"><a href="#">Emplois à Laval</a></li>
+            <li class="py-1"><a href="#">Emplois à Sherbrooke</a></li>
+            <li class="py-1"><a href="#">Emplois à Trois-Rivières</a></li>
+            <li class="py-1"><a href="#">Emplois à Québec</a></li>
+            <li class="py-1"><a href="#">Emplois à Lévis</a></li>
+            <li class="py-1"><a href="#">Emplois à Gatineau</a></li>
+            <li class="py-1"><a href="#">Tous les emplois en résidences </a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="block px-5 py-4 hover:text-green border-b-1 border-gray-300"><i class="icon-chevron-right mr-3 text-green inline-block"></i> Services pour retraités</a>
+          <ul class="hidden bg-yellow-100 px-5 py-3 invisible opacity-0">
+            <li class="py-1"><a href="#">Activités et loisirs </a></li>
+            <li class="py-1"><a href="#">Conseillers en hébergement </a></li>
+            <li class="py-1"><a href="#">Santé</a></li>
+            <li class="py-1"><a href="#">Soins à domicile </a></li>
+            <li class="py-1"><a href="#">Déménagement </a></li>
+            <li class="py-1"><a href="#">Services financiers </a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="block px-5 py-4 hover:text-green border-b-1 border-gray-300"><i class="icon-chevron-right mr-3 text-green inline-block"></i> Ressources & Blogue</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+   
+
+    
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

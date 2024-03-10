@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bg-tiles {
+    background-size: 73px 73px;
+    background-image: linear-gradient(currentColor 1px, transparent 1px),
+      linear-gradient(to right, currentColor 1px, transparent 1px);
+    @apply -m-0.5;
+  }
+}
+
+/* added dynamically via JS, so they are not added in the compiled css */
+.rotate-90 {
+  transform: rotate(90deg);
+}

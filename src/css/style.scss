@@ -1,0 +1,31 @@
+@import "./tailwind";
+
+/* Variables */
+$brand-border: #d2d3d7;
+$brand-primary: #69af4b;
+$brand-blue: #008DEB;
+$brand-text: #3f3f3f;
+$brand-link: #666666;
+
+@import "./utils/reset";
+
+/* Clean this */
+@import "./base/icomoon";
+@import "./base/icons";
+@import "./base/type";
+
+/* Libraries */
+@import "./libs/glider";
+
+/* Layout */
+@import "./layout/header";
+@import "./layout/sidebar";
+@import "./layout/footer";
+
+@import "./layout/mobile";
+
+/* Parts */
+@import "./parts/card";
+
+/* Defaults */
+@import "./main";

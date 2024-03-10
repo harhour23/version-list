@@ -1,0 +1,136 @@
+$breakpoint-mobile : 768px;
+
+html {
+  @apply text-gray-700;
+  font-size: 15px;
+}
+
+a:hover,
+select,
+input {
+  cursor: pointer;
+}
+
+
+.border-b-1 {
+  border-bottom-width: 1px;
+}
+
+.list-hover {
+  > a:hover {
+    @apply text-blue-500;
+    text-decoration: underline;
+  }
+}
+
+.sidebar,
+.main-content {
+  width: 100%;
+}
+
+@media (min-width: 1024px){
+  .sidebar {
+    flex: 0 0 300px;
+  }
+
+  .main-content {
+    width: calc(1120px - 300px);
+    padding-left: 40px;
+  }
+}
+
+.img-call {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+.bloc-conseiller {
+
+  &--icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.bloc-conseiller:hover span {
+  @apply text-orange-400;
+}
+
+.menu-pills li a:hover {
+  @apply bg-orange-100;
+
+  .menu-pills__icon {
+    @apply bg-orange-400;
+  }
+  .menu-pills__text {
+    @apply text-orange-400;
+  }
+}
+
+.bloc-vedette {
+
+  .glider-track {
+    padding-bottom: 15px;
+  }
+
+  .glider-slide > a {
+    margin-right: 5px;
+
+    @media (min-width: $breakpoint-mobile){
+      margin-right: 0;
+    }
+
+  }
+
+  
+  p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @supports (-webkit-line-clamp: 2) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &__logo {
+    width: 86px;
+  }
+}
+
+
+.line-overflow-1 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  @supports (-webkit-line-clamp: 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@media (max-width: $breakpoint-mobile){
+  .mobile-container {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    > div {    
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .mobile-container.bg-yellow-100 {
+    box-shadow: 0 0 0 100vmax #F4F6F1;
+    clip-path: inset(0 -100vmax); 
+  }
+}

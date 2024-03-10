@@ -1,0 +1,5 @@
+
+// 60px = padding a gauche et a droite addditionné
+.mobile-search-overlay--inner {
+  max-width: calc(100% - 60px);
+}
