@@ -1,3 +1,4 @@
+//libraries like jquery etc
 /* @preserve
     _____ __ _     __                _
    / ___// /(_)___/ /___  ____      (_)___
@@ -599,301 +600,6 @@
   return Glider
 })
 
-//libraries like jquery etc
-  
-// Vivre utils
-
-  let VivreBoxAppear = (function (parent, input, overlay) {
-
-    // console.log("Vivre");
-    // console.log( a + 100);
-
-    input.addEventListener("click", function(e){
-        // console.log(e.target.value)
-
-        input.classList.add("active");
-
-        overlay.classList.replace("invisible", 'visible');
-        overlay.classList.replace("opacity-0", 'opacity-100');
-        overlay.classList.add("ease-out", 'duration-300');
-
-    });
-
-
-    // I'm using "click" but it works with any event
-    document.addEventListener('click', event => {
-      const isClickInside5 = parent.contains(event.target)
-
-      const isActive = overlay.classList.contains("opacity-100");
-
-      if(isActive){
-
-        // console.log("sidebar box is visible (opacity 100)");
-
-        if (!isClickInside5) {
-          // The click was OUTSIDE the specifiedElement, do something
-
-          // console.log("click not insidee");
-          input.classList.remove("active");
-          
-          overlay.classList.replace("opacity-100", 'opacity-0');
-          overlay.classList.replace("visible", 'invisible');
-        }
-      }
-    })
-    
-  });
-window.addEventListener("DOMContentLoaded", () => {
-
-  console.log("Listing-content.js")
-
-  let mainContentText =  document.querySelector("#main-content-text-content");
-  let mainContentTextButton = document.querySelector("#main-content-text-btn");
-
-  mainContentTextButton.addEventListener("click", function(e){
-
-    e.preventDefault();
-    
-
-    if(mainContentTextButton.classList.contains("active")){
-
-      mainContentTextButton.classList.remove("active");
-
-      mainContentText.classList.remove("ease-in", 'duration-300');
-      
-      mainContentText.classList.replace("opacity-100", 'opacity-0');
-      mainContentText.classList.replace("h-auto", 'h-0');
-      mainContentText.classList.replace("visible", 'invisible');
-      
-    } else {
-
-      mainContentTextButton.classList.add("active");
-
-      mainContentText.classList.add("ease-in", 'duration-300');
-
-      mainContentText.classList.replace("opacity-0", 'opacity-100');
-      mainContentText.classList.replace("h-0", 'h-auto');
-      mainContentText.classList.replace("invisible", 'visible');
-    }
-    
-
-  });
-
-});
-window.addEventListener("DOMContentLoaded", () => {
-  console.log("Loaded mobile Scripts");
-
-
-
-  let mobileInput = document.querySelector("#mobile-search-input");
-  let mobileBox = document.querySelector("#mobile-search-overlay");
-
-  mobileInput.addEventListener("focus", function(e){
-     // console.log(e.target.value)
-
-      mobileBox.classList.replace("invisible", 'visible');
-      mobileBox.classList.replace("opacity-0", 'opacity-100');
-      
-      mobileBox.classList.add("ease-out", 'duration-300');
-
-      // le mobileInput
-      mobileInput.classList.replace("rounded-lg", 'rounded-t-lg');
-
-  });
-
-  mobileInput.addEventListener("focusout", function(e){
-    console.log(e.target.value)
-
-
-    mobileBox.classList.replace("opacity-100", 'opacity-0');
-    mobileBox.classList.replace("visible", 'invisible');
-
-    // le mobileInput
-
-    mobileInput.classList.replace("rounded-t-lg", 'rounded-lg');
-    //box.classList.add("ease-out duration-300");
-  });
-
-
-
-  // toggle logics
-
-
-  var toggles = document.querySelectorAll('[data-toggle-open]');
-
-  console.log("TOggles:", toggles);
-  toggles.forEach(function(element, index) {
-      // current DOM element
-      // console.log("ELEMENT: ", element);
-
-      console.log("Toggle:", index);
-
-     var toggleBox = element.getAttribute('data-toggle-open');
-
-     var arrowIcon = element.querySelector(".js-indicator");
-
-     console.log("arrowIcon:", arrowIcon);
-
-     console.log("Le box: ", toggleBox);
-
-      element.addEventListener('click', function(){
-        console.log("Toggle got licked!!!");
-        var toggleBoxDiv = document.querySelector('[data-toggle='+toggleBox+']');
-
-        // if(toggleBoxDiv){
-        //   toggleBoxDiv = toggleBoxDiv[0];
-        // }
-
-        console.log("Le div:", toggleBoxDiv);
-
-        if(toggleBoxDiv.classList.contains("opacity-0")){
-          arrowIcon.classList.add("rotate-90");
-          toggleBoxDiv.classList.replace("opacity-0", 'opacity-100');
-          toggleBoxDiv.classList.replace("h-0", 'h-auto');
-          toggleBoxDiv.classList.replace("invisible", 'visible');
-
-
-        } else {
-          arrowIcon.classList.remove("rotate-90");
-          toggleBoxDiv.classList.replace("opacity-100", 'opacity-0');
-          toggleBoxDiv.classList.replace("h-auto", 'h-0');
-          toggleBoxDiv.classList.replace("visible", 'invisible');
-        }
-      });
-
-      
-      // let link = element.querySelector("a");
-      // let submenu = element.querySelector("ul");
-
-      // console.log("Link:, ", link);
-
-    
-      // if(submenu){
-      //   console.log("submenu");
-      //   link.addEventListener('click', function(){
-      //     // console.log("YOP");
-        
-
-      //     if(element.classList.contains("active")){
-      //       element.classList.remove("active");
-      //       submenu.classList.add("hidden");
-      //       submenu.classList.replace("visible", 'invisible');
-      //       submenu.classList.replace("opacity-100", 'opacity-0');
-           
-
-      //     } else {
-      //       element.classList.add("active");
-      //       submenu.classList.remove("hidden");
-      //       submenu.classList.replace("invisible", 'visible');
-      //       submenu.classList.replace("opacity-0", 'opacity-100');
-
-
-      //     }
-      //   });
-      // } else {
-      //   // console.log("no submenu");
-      // }
-
-      // close all others ?
-  });
-
-  
-});
-window.addEventListener("DOMContentLoaded", () => {
-  console.log("Loaded Sidebar Scripts");
-
-  // Criterias
-  let sidebarCriterias =  document.querySelector("#js-sidebar-criterias");
-  let sidebarCriteriasButton = document.querySelector("#js-show-sidebar-criterias");
-
-  let sidebarCriteriasButtonTextActive = document.querySelector("#js-show-sidebar-criterias span.active");
-  let sidebarCriteriasButtonTextInactive = document.querySelector("#js-show-sidebar-criterias span.inactive");
-
-  // Categories
-  let SidebarCategoriesInput = document.querySelector("#sidebar-categories-input");
-  let SidebarCategoriesBox = document.querySelector("#sidebar-categories-overlay");
-  let SidebarCategories = document.querySelector(".sidebar-categories");
-
-  // regions
-  let SidebarRegionsInput = document.querySelector("#sidebar-regions-input");
-  let SidebarRegionsBox = document.querySelector("#sidebar-regions-overlay");
-  let SidebarRegions = document.querySelector(".sidebar-regions");
-
-  // regions
-  let SidebarSecteursInput = document.querySelector("#sidebar-secteurs-input");
-  let SidebarSecteursBox = document.querySelector("#sidebar-secteurs-overlay");
-  let SidebarSecteurs = document.querySelector(".sidebar-secteurs");
-
-  // regions
-  let SidebarUnitesInput = document.querySelector("#sidebar-unites-input");
-  let SidebarUnitesBox = document.querySelector("#sidebar-unites-overlay");
-  let SidebarUnites = document.querySelector(".sidebar-unites");
-
-  let SidebarReconnaissanceInput = document.querySelector("#sidebar-reconnaissance-input");
-  let SidebarReconnaissanceBox = document.querySelector("#sidebar-reconnaissance-overlay");
-  let SidebarReconnaissance = document.querySelector(".sidebar-reconnaissance");
-
-  let SidebarServicesEssentielsInput = document.querySelector("#sidebar-servicesessentiels-input");
-  let SidebarServicesEssentielsBox = document.querySelector("#sidebar-servicesessentiels-overlay");
-  let SidebarServicesEssentiels = document.querySelector(".sidebar-servicesessentiels");
-
-  let SidebarPromotionsInput = document.querySelector("#sidebar-promotions-input");
-  let SidebarPromotionsBox = document.querySelector("#sidebar-promotions-overlay");
-  let SidebarPromotions = document.querySelector(".sidebar-promotions");
-
-
-  sidebarCriteriasButton.addEventListener("click", function(e){
-
-    e.preventDefault();
-
-    if(sidebarCriterias.classList.contains("active")){
-
-      sidebarCriterias.classList.remove("active");
-
-      sidebarCriteriasButtonTextActive.classList.add("hidden");
-      sidebarCriteriasButtonTextInactive.classList.remove("hidden");
-
-      sidebarCriterias.classList.remove("ease-in", 'duration-300');
-      
-      sidebarCriterias.classList.replace("opacity-100", 'opacity-0');
-      sidebarCriterias.classList.replace("h-auto", 'h-0');
-      sidebarCriterias.classList.replace("visible", 'invisible');
-
-      // Le bouton
-      
-    } else {
-
-      sidebarCriterias.classList.add("active");
-
-      sidebarCriteriasButtonTextInactive.classList.add("hidden");
-      sidebarCriteriasButtonTextActive.classList.remove("hidden");
-
-      sidebarCriterias.classList.add("ease-in", 'duration-300');
-
-      sidebarCriterias.classList.replace("opacity-0", 'opacity-100');
-      sidebarCriterias.classList.replace("h-0", 'h-auto');
-      sidebarCriterias.classList.replace("invisible", 'visible');
-    }
-
-
-  });
-
-
-  // Categories
-  VivreBoxAppear(SidebarRegions, SidebarRegionsInput, SidebarRegionsBox);
-  VivreBoxAppear(SidebarSecteurs, SidebarSecteursInput, SidebarSecteursBox);
-  VivreBoxAppear(SidebarCategories, SidebarCategoriesInput, SidebarCategoriesBox);
-
-  VivreBoxAppear(SidebarUnites, SidebarUnitesInput, SidebarUnitesBox);
-
-  VivreBoxAppear(SidebarReconnaissance, SidebarReconnaissanceInput, SidebarReconnaissanceBox);
-  VivreBoxAppear(SidebarServicesEssentiels, SidebarServicesEssentielsInput, SidebarServicesEssentielsBox);
-  VivreBoxAppear(SidebarPromotions, SidebarPromotionsInput, SidebarPromotionsBox);
-  // Regions
-
-
-
-});
 
 
 var gliderFeatures;
@@ -1253,3 +959,298 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+
+  console.log("Listing-content.js")
+
+  let mainContentText =  document.querySelector("#main-content-text-content");
+  let mainContentTextButton = document.querySelector("#main-content-text-btn");
+
+  mainContentTextButton.addEventListener("click", function(e){
+
+    e.preventDefault();
+    
+
+    if(mainContentTextButton.classList.contains("active")){
+
+      mainContentTextButton.classList.remove("active");
+
+      mainContentText.classList.remove("ease-in", 'duration-300');
+      
+      mainContentText.classList.replace("opacity-100", 'opacity-0');
+      mainContentText.classList.replace("h-auto", 'h-0');
+      mainContentText.classList.replace("visible", 'invisible');
+      
+    } else {
+
+      mainContentTextButton.classList.add("active");
+
+      mainContentText.classList.add("ease-in", 'duration-300');
+
+      mainContentText.classList.replace("opacity-0", 'opacity-100');
+      mainContentText.classList.replace("h-0", 'h-auto');
+      mainContentText.classList.replace("invisible", 'visible');
+    }
+    
+
+  });
+
+});
+window.addEventListener("DOMContentLoaded", () => {
+  console.log("Loaded mobile Scripts");
+
+
+
+  let mobileInput = document.querySelector("#mobile-search-input");
+  let mobileBox = document.querySelector("#mobile-search-overlay");
+
+  mobileInput.addEventListener("focus", function(e){
+     // console.log(e.target.value)
+
+      mobileBox.classList.replace("invisible", 'visible');
+      mobileBox.classList.replace("opacity-0", 'opacity-100');
+      
+      mobileBox.classList.add("ease-out", 'duration-300');
+
+      // le mobileInput
+      mobileInput.classList.replace("rounded-lg", 'rounded-t-lg');
+
+  });
+
+  mobileInput.addEventListener("focusout", function(e){
+    console.log(e.target.value)
+
+
+    mobileBox.classList.replace("opacity-100", 'opacity-0');
+    mobileBox.classList.replace("visible", 'invisible');
+
+    // le mobileInput
+
+    mobileInput.classList.replace("rounded-t-lg", 'rounded-lg');
+    //box.classList.add("ease-out duration-300");
+  });
+
+
+
+  // toggle logics
+
+
+  var toggles = document.querySelectorAll('[data-toggle-open]');
+
+  console.log("TOggles:", toggles);
+  toggles.forEach(function(element, index) {
+      // current DOM element
+      // console.log("ELEMENT: ", element);
+
+      console.log("Toggle:", index);
+
+     var toggleBox = element.getAttribute('data-toggle-open');
+
+     var arrowIcon = element.querySelector(".js-indicator");
+
+     console.log("arrowIcon:", arrowIcon);
+
+     console.log("Le box: ", toggleBox);
+
+      element.addEventListener('click', function(){
+        console.log("Toggle got licked!!!");
+        var toggleBoxDiv = document.querySelector('[data-toggle='+toggleBox+']');
+
+        // if(toggleBoxDiv){
+        //   toggleBoxDiv = toggleBoxDiv[0];
+        // }
+
+        console.log("Le div:", toggleBoxDiv);
+
+        if(toggleBoxDiv.classList.contains("opacity-0")){
+          arrowIcon.classList.add("rotate-90");
+          toggleBoxDiv.classList.replace("opacity-0", 'opacity-100');
+          toggleBoxDiv.classList.replace("h-0", 'h-auto');
+          toggleBoxDiv.classList.replace("invisible", 'visible');
+
+
+        } else {
+          arrowIcon.classList.remove("rotate-90");
+          toggleBoxDiv.classList.replace("opacity-100", 'opacity-0');
+          toggleBoxDiv.classList.replace("h-auto", 'h-0');
+          toggleBoxDiv.classList.replace("visible", 'invisible');
+        }
+      });
+
+      
+      // let link = element.querySelector("a");
+      // let submenu = element.querySelector("ul");
+
+      // console.log("Link:, ", link);
+
+    
+      // if(submenu){
+      //   console.log("submenu");
+      //   link.addEventListener('click', function(){
+      //     // console.log("YOP");
+        
+
+      //     if(element.classList.contains("active")){
+      //       element.classList.remove("active");
+      //       submenu.classList.add("hidden");
+      //       submenu.classList.replace("visible", 'invisible');
+      //       submenu.classList.replace("opacity-100", 'opacity-0');
+           
+
+      //     } else {
+      //       element.classList.add("active");
+      //       submenu.classList.remove("hidden");
+      //       submenu.classList.replace("invisible", 'visible');
+      //       submenu.classList.replace("opacity-0", 'opacity-100');
+
+
+      //     }
+      //   });
+      // } else {
+      //   // console.log("no submenu");
+      // }
+
+      // close all others ?
+  });
+
+  
+});
+window.addEventListener("DOMContentLoaded", () => {
+  console.log("Loaded Sidebar Scripts");
+
+  // Criterias
+  let sidebarCriterias =  document.querySelector("#js-sidebar-criterias");
+  let sidebarCriteriasButton = document.querySelector("#js-show-sidebar-criterias");
+
+  let sidebarCriteriasButtonTextActive = document.querySelector("#js-show-sidebar-criterias span.active");
+  let sidebarCriteriasButtonTextInactive = document.querySelector("#js-show-sidebar-criterias span.inactive");
+
+  // Categories
+  let SidebarCategoriesInput = document.querySelector("#sidebar-categories-input");
+  let SidebarCategoriesBox = document.querySelector("#sidebar-categories-overlay");
+  let SidebarCategories = document.querySelector(".sidebar-categories");
+
+  // regions
+  let SidebarRegionsInput = document.querySelector("#sidebar-regions-input");
+  let SidebarRegionsBox = document.querySelector("#sidebar-regions-overlay");
+  let SidebarRegions = document.querySelector(".sidebar-regions");
+
+  // regions
+  let SidebarSecteursInput = document.querySelector("#sidebar-secteurs-input");
+  let SidebarSecteursBox = document.querySelector("#sidebar-secteurs-overlay");
+  let SidebarSecteurs = document.querySelector(".sidebar-secteurs");
+
+  // regions
+  let SidebarUnitesInput = document.querySelector("#sidebar-unites-input");
+  let SidebarUnitesBox = document.querySelector("#sidebar-unites-overlay");
+  let SidebarUnites = document.querySelector(".sidebar-unites");
+
+  let SidebarReconnaissanceInput = document.querySelector("#sidebar-reconnaissance-input");
+  let SidebarReconnaissanceBox = document.querySelector("#sidebar-reconnaissance-overlay");
+  let SidebarReconnaissance = document.querySelector(".sidebar-reconnaissance");
+
+  let SidebarServicesEssentielsInput = document.querySelector("#sidebar-servicesessentiels-input");
+  let SidebarServicesEssentielsBox = document.querySelector("#sidebar-servicesessentiels-overlay");
+  let SidebarServicesEssentiels = document.querySelector(".sidebar-servicesessentiels");
+
+  let SidebarPromotionsInput = document.querySelector("#sidebar-promotions-input");
+  let SidebarPromotionsBox = document.querySelector("#sidebar-promotions-overlay");
+  let SidebarPromotions = document.querySelector(".sidebar-promotions");
+
+
+  sidebarCriteriasButton.addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    if(sidebarCriterias.classList.contains("active")){
+
+      sidebarCriterias.classList.remove("active");
+
+      sidebarCriteriasButtonTextActive.classList.add("hidden");
+      sidebarCriteriasButtonTextInactive.classList.remove("hidden");
+
+      sidebarCriterias.classList.remove("ease-in", 'duration-300');
+      
+      sidebarCriterias.classList.replace("opacity-100", 'opacity-0');
+      sidebarCriterias.classList.replace("h-auto", 'h-0');
+      sidebarCriterias.classList.replace("visible", 'invisible');
+
+      // Le bouton
+      
+    } else {
+
+      sidebarCriterias.classList.add("active");
+
+      sidebarCriteriasButtonTextInactive.classList.add("hidden");
+      sidebarCriteriasButtonTextActive.classList.remove("hidden");
+
+      sidebarCriterias.classList.add("ease-in", 'duration-300');
+
+      sidebarCriterias.classList.replace("opacity-0", 'opacity-100');
+      sidebarCriterias.classList.replace("h-0", 'h-auto');
+      sidebarCriterias.classList.replace("invisible", 'visible');
+    }
+
+
+  });
+
+
+  // Categories
+  VivreBoxAppear(SidebarRegions, SidebarRegionsInput, SidebarRegionsBox);
+  VivreBoxAppear(SidebarSecteurs, SidebarSecteursInput, SidebarSecteursBox);
+  VivreBoxAppear(SidebarCategories, SidebarCategoriesInput, SidebarCategoriesBox);
+
+  VivreBoxAppear(SidebarUnites, SidebarUnitesInput, SidebarUnitesBox);
+
+  VivreBoxAppear(SidebarReconnaissance, SidebarReconnaissanceInput, SidebarReconnaissanceBox);
+  VivreBoxAppear(SidebarServicesEssentiels, SidebarServicesEssentielsInput, SidebarServicesEssentielsBox);
+  VivreBoxAppear(SidebarPromotions, SidebarPromotionsInput, SidebarPromotionsBox);
+  // Regions
+
+
+
+});
+  
+// Vivre utils
+
+  let VivreBoxAppear = (function (parent, input, overlay) {
+
+    // console.log("Vivre");
+    // console.log( a + 100);
+
+    input.addEventListener("click", function(e){
+        // console.log(e.target.value)
+
+        input.classList.add("active");
+
+        overlay.classList.replace("invisible", 'visible');
+        overlay.classList.replace("opacity-0", 'opacity-100');
+        overlay.classList.add("ease-out", 'duration-300');
+
+    });
+
+
+    // I'm using "click" but it works with any event
+    document.addEventListener('click', event => {
+      const isClickInside5 = parent.contains(event.target)
+
+      const isActive = overlay.classList.contains("opacity-100");
+
+      if(isActive){
+
+        // console.log("sidebar box is visible (opacity 100)");
+
+        if (!isClickInside5) {
+          // The click was OUTSIDE the specifiedElement, do something
+
+          // console.log("click not insidee");
+          input.classList.remove("active");
+          
+          overlay.classList.replace("opacity-100", 'opacity-0');
+          overlay.classList.replace("visible", 'invisible');
+        }
+      }
+    })
+    
+  });

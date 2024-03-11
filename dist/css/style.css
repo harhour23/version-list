@@ -728,6 +728,10 @@ select {
 .m-1 {
   margin: 5px;
 }
+.-mx-4 {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -739,14 +743,6 @@ select {
 .my-4 {
   margin-top: 15px;
   margin-bottom: 15px;
-}
-.-my-4 {
-  margin-top: -15px;
-  margin-bottom: -15px;
-}
-.-mx-4 {
-  margin-left: -15px;
-  margin-right: -15px;
 }
 .mb-0 {
   margin-bottom: 0px;
@@ -778,6 +774,9 @@ select {
 .mb-8 {
   margin-bottom: 30px;
 }
+.mb-\[-1px\] {
+  margin-bottom: -1px;
+}
 .ml-1 {
   margin-left: 5px;
 }
@@ -795,6 +794,9 @@ select {
 }
 .mr-0\.5 {
   margin-right: 3px;
+}
+.mr-1 {
+  margin-right: 5px;
 }
 .mr-2 {
   margin-right: 8.5px;
@@ -828,12 +830,6 @@ select {
 }
 .mt-9 {
   margin-top: 40px;
-}
-.mb-\[-1px\] {
-  margin-bottom: -1px;
-}
-.mr-1 {
-  margin-right: 5px;
 }
 .block {
   display: block;
@@ -2357,11 +2353,6 @@ input {
     order: 1;
   }
 
-  .md\:-my-0 {
-    margin-top: -0px;
-    margin-bottom: -0px;
-  }
-
   .md\:-mx-0 {
     margin-left: -0px;
     margin-right: -0px;
@@ -2369,6 +2360,10 @@ input {
 
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:mb-5 {
+    margin-bottom: 20px;
   }
 
   .md\:ml-3 {
@@ -2389,10 +2384,6 @@ input {
 
   .md\:mt-5 {
     margin-top: 20px;
-  }
-
-  .md\:mb-5 {
-    margin-bottom: 20px;
   }
 
   .md\:block {
@@ -2503,10 +2494,6 @@ input {
 
   .md\:pr-0 {
     padding-right: 0px;
-  }
-
-  .md\:pt-0 {
-    padding-top: 0px;
   }
 
   .md\:text-left {
