@@ -5093,10 +5093,10 @@
   "resolved" "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
   "version" "2.1.2"
 
-"sass@^1.58.1":
-  "integrity" "sha512-bnINi6nPXbP1XNRaranMFEBZWUfdW/AF16Ql5+ypRxfTvCRTTKrLsMIakyDcayUt2t/RZotmL4kgJwNH5xO+bg=="
-  "resolved" "https://registry.npmjs.org/sass/-/sass-1.58.1.tgz"
-  "version" "1.58.1"
+"sass@^1.71.1":
+  "integrity" "sha512-wovtnV2PxzteLlfNzbgm1tFXPLoZILYAMJtvoXXkD7/+1uP41eKkIt1ypWq5/q2uT94qHjXehEYfmjKOvjL9sg=="
+  "resolved" "https://registry.npmjs.org/sass/-/sass-1.71.1.tgz"
+  "version" "1.71.1"
   dependencies:
     "chokidar" ">=3.0.0 <4.0.0"
     "immutable" "^4.0.0"
